@@ -1,0 +1,34 @@
+proxies:
+- name: Vmess1
+  type: vmess
+  server: mailin.fr
+  port: 443
+  uuid: e7d45d5e-fc75-4e19-bc61-a982f2cc3585
+  alterId: 0
+  cipher: auto
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: vmess-fr01.gproxy.pro
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+    headers:
+      Host: vmess-fr01.gproxy.pro
+#=================================================
+- name: Vmess2
+  type: vmess
+  server: domain/ip
+  port: 443
+  uuid: xxxx2035-7dd8-48e1-876e-1cdb42657356
+  alterId: 0
+  cipher: auto
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: domain
+  network: ws
+  ws-opts:
+    path: /path
+    headers:
+      Host: domain

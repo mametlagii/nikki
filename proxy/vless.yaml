@@ -1,0 +1,31 @@
+proxies:
+- name: Vless1
+  type: vless
+  server: mailin.fr
+  port: 443
+  uuid: 369fe68a-a61a-4289-ab0b-0d488d622421
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: vless-us02.gproxy.gratis
+  network: ws
+  ws-opts:
+    path: /vless-ws
+    headers:
+      Host: vless-us02.gproxy.gratis
+#=================================================
+- name: Vless2
+  type: vless
+  server: domain/ip
+  port: 443
+  uuid: xxxx9c4f-2e80-4c17-bff6-ef13bd1af934
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: domain
+  network: ws
+  ws-opts:
+    path: /path
+    headers:
+      Host: domain
+#=================================================

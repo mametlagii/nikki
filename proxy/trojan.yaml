@@ -1,1 +1,29 @@
-
+proxies:
+- name: Trojan1
+  type: trojan
+  server: mailin.fr
+  port: 443
+  password: 6b2c5cb4-8cc4-4aad-a932-09d8f338334f
+  udp: true
+  sni: tro-id05.gproxy.pro
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: tro-id05.gproxy.pro
+#=================================================
+- name: Trojan2
+  type: trojan
+  server: domain/ip
+  port: 443
+  password: password
+  udp: true
+  sni: domain
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path
+    headers:
+      Host: domain
+#=================================================
